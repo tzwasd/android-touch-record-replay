@@ -14,4 +14,4 @@ echo ---"$MYSENDEVENT"---
 adb push recorded_touch_events.txt /sdcard/
 
 # Replay the recorded events
-adb shell /data/local/tmp/mysendevent "${TOUCH_DEVICE#*-> }" /sdcard/recorded_touch_events.txt
+adb shell su -c /data/local/tmp/mysendevent "${TOUCH_DEVICE#*-> }" /sdcard/recorded_touch_events.txt
